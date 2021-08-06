@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             when {
-                branch 'master'
+                branch 'main' , url:'https://github.com/Ashish-Rawat-hub/Devops-project1.git'
             }
             steps {
                 script {
