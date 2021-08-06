@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             when {
-                branch 'main' , url 'https://github.com/Ashish-Rawat-hub/cicd-pipeline-train-schedule-autodeploy.git'
+                branch 'master'
             }
             steps {
                 script {
