@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'Test1' }
     environment {
         //be sure to replace "bhavukm" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "Ashish-Rawat-hub/train-schedule"
