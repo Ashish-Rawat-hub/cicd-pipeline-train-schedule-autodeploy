@@ -12,6 +12,13 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
+        stage('Start Docker'){
+            steps{
+                sh 'sudo systemctl unmask docker'
+                sh 'sudo systemctl start docker'
+                sh 'systemctl status docker'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 script {
