@@ -17,6 +17,7 @@ pipeline {
                 sh 'sudo systemctl unmask docker'
                 sh 'sudo systemctl start docker'
                 sh 'systemctl status docker'
+                sh 'sudo chmod 666 /var/run/docker.sock'
             }
         }
         stage('Build Docker Image') {
