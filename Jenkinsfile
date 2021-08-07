@@ -20,15 +20,6 @@ pipeline {
                 sh 'sudo chmod 666 /var/run/docker.sock'
             }
         }
-        stage('Delete existing'){
-            steps{
-                script{
-                    sh 'sudo service docker stop'
-                    sh 'sudo rm -rf /var/lib/docker'
-                    sh 'sudo service docker start'
-                }
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 script {
